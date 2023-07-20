@@ -1,0 +1,182 @@
+$font-family-sans-serif: "Segoe UI", sans-serif;
+$widthContent: 95%;
+$menuBarColor: rgb(29, 34, 40);
+$backgroundColor: #f4f6f9;
+$topNavColor: #0259C2;
+$gray-1: #777777;
+
+// Por si usas position:relative este te respete el height 100%
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0 !important;
+}
+
+#app {
+    font-family: $font-family-sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $menuBarColor;
+    width: 100%;
+
+    background-color: #f4f6f9;
+}
+
+// Oculta el título del suitelet
+.uir-page-title {
+    display: none;
+}
+
+#global {
+    display: grid !important;
+    grid-template-columns: 16rem 1fr;
+    grid-template-rows: 4rem 100vh;
+}
+
+.topNavBarC {
+    display: grid !important;
+    background-color: $topNavColor !important;
+    grid-column: 1/3;
+    grid-row: 1/3;
+
+}
+
+.sideNavBarC {
+    display: grid !important;
+    background-color: white !important;
+    grid-column: 1/2;
+    grid-row: 2/3;
+
+
+}
+
+.moduleComponent {
+    display: grid !important;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: #f4f6f9 !important;
+
+}
+
+.userName {
+    color: $gray-1;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.userRole {
+    color: $gray-1;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+div:has(.collapsed) {
+    .moduleComponent {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        transition: 0.3s;
+    }
+
+    .sideNavBarC {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        transition: 0.3s;
+
+    }
+
+}
+.card{
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.1);
+    border: 0px !important;
+    transition: 0.3s !important;
+    border-radius: 3px !important;
+    width: $widthContent;
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+div:has(.hide_bar) {
+    .moduleComponent {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        transition: 0.3s;
+
+    }
+
+    .sideNavBarC {
+        grid-column: 1/1;
+        grid-row: 2/3;
+        transition: 0.3s;
+
+    }
+    
+}
+
+nav.navbar {
+    padding-top: 0px !important;
+}
+
+.pl-1 {
+    padding-left: 20px !important;
+}
+
+.btn_removeBKColor {
+    background-color: transparent !important;
+    border: 0px !important;
+}
+// Menu of SideBar styles
+.menuItem{
+    font-size: 1rem;
+    &:hover{
+        cursor: pointer;
+        background-color: $topNavColor;
+        color: white;
+    }
+}
+.menuSubItem {
+    &:hover a,
+    &:hover{
+        cursor: pointer;
+        background-color: $topNavColor;
+        color: white !important;
+    }
+}
+
+a{
+    text-decoration: none !important;
+    color: $menuBarColor !important;
+}
+// Breadcrumbs styles
+.breadcrumb{
+    color: $topNavColor;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+// Titles and subtitles of the Financials
+.titleFinancial{
+    font-size: 1.6rem;
+    color: $gray-1;
+}
+.subtitleFinancial{
+    font-size: 1rem;
+    color: $gray-1;
+    font-weight: 400;
+}
+.blue-text{
+    color:$topNavColor !important;
+}
+.btn-icon{
+    cursor:pointer !important;
+    padding:7px;
+    &:hover{
+        color:$backgroundColor !important;
+        background-color: $topNavColor;
+        border-radius: 3px;
+
+    }
+}

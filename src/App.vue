@@ -1,28 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Healix content active2"/>
+    <router-view>
+      <FinancialsViewVue/>
+    </router-view>
+    
+    
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FinancialsViewVue from './views/FinancialsView.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+
+    FinancialsViewVue
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import './assets/scss/generalStyles.scss';
+@import './assets/scss/Datatable.scss'
 </style>
