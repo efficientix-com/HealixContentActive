@@ -1,14 +1,13 @@
 <template>
   <div id="CalculationEquity">
     <div class="d-flex">
-      <div  class="mr-1">
+      <div class="mr-1">
         <label class="mr-sm-2" for="select-year">Year</label>
         <b-form-select
-        id="select-year"
+          id="select-year"
           class="form-select"
           v-model="selectedYear"
           :options="optionsYear"
-          
         ></b-form-select>
       </div>
       <div>
@@ -20,19 +19,20 @@
           :options="optionsMonth"
         ></b-form-select>
       </div>
-      
-      <div class="d-flex justify-content-center align-items-center blue-text ml-auto mr-1">
-        
-            <font-awesome-icon class="btn-icon" icon="fa-file-export" size="1x" />
+
+      <div
+        class="d-flex justify-content-center align-items-center blue-text ml-auto mr-1"
+      >
+        <font-awesome-icon title="Export" class="btn-icon" icon="fa-file-export" size="1x" />
       </div>
       <div class="d-flex justify-content-center align-items-center blue-text">
-        <font-awesome-icon class="btn-icon" icon="fa-print" size="1x" />
+        <font-awesome-icon title="Print" class="btn-icon" icon="fa-print" size="1x" />
       </div>
     </div>
     <b-row class="mt-4">
-        <b-col>
-            <table class="table mt-3 px-2" id="datatable_equity"></table>
-        </b-col>
+      <b-col>
+        <table class="table mt-3 px-2" id="datatable_equity"></table>
+      </b-col>
     </b-row>
   </div>
 </template>
@@ -44,16 +44,16 @@ import "datatables.net-responsive-dt";
 import "datatables.net-dt/js/dataTables.dataTables";
 import DataTable from "datatables.net-dt";
 import $ from "jquery";
-import {data_test} from "./data_test";
+import { data_test } from "./data_test";
 export default {
   name: "CalculationEquity",
   data: function () {
     return {
-        datatable: null,
+      datatable: null,
       isToggle: null,
       menuItemsAr: [],
       selectedMonth: "June",
-      selectedYear:'2021',
+      selectedYear: "2021",
       optionsMonth: [
         { text: "January", value: "January" },
         { text: "February", value: "February" },
@@ -67,60 +67,60 @@ export default {
         { text: "October", value: "October" },
         { text: "November", value: "November" },
         { text: "December", value: "December" },
-    ],
-    optionsYear:[
-        {value:'2018',text:'2018'},
-        {value:'2019',text:'2019'},
-        {value:'2020',text:'2020'},
-        {value:'2021',text:'2021'},
-        {value:'2022',text:'2022'},
-        {value:'2023',text:'2023'},
-    ]
+      ],
+      optionsYear: [
+        { value: "2018", text: "2018" },
+        { value: "2019", text: "2019" },
+        { value: "2020", text: "2020" },
+        { value: "2021", text: "2021" },
+        { value: "2022", text: "2022" },
+        { value: "2023", text: "2023" },
+      ],
     };
   },
-  mounted(){
-    this.datatable=new DataTable('#datatable_equity',{
-        responsive:true,
-        data:data_test(),
-        columnDefs:[
-        { targets: [1,2,3,4,5], width: "10rem" },
-        { orderable: false,targets: [0,1,2,3,4,5] },
+  mounted() {
+    this.datatable = new DataTable("#datatable_equity", {
+      responsive: true,
+      data: data_test(),
+      columnDefs: [
+        { targets: [1, 2, 3, 4, 5], width: "10rem" },
+        { orderable: false, targets: [0, 1, 2, 3, 4, 5] },
 
         // { targets: [7], width: "0.8rem" },
-        ],
-        order: [],
-        rowCallback:function(row,data,index){
-            if(index===5 || index===6){
-                $(row).addClass('bold-text');
-            }
+      ],
+      order: [],
+      rowCallback: function (row, data, index) {
+        if (index === 5 || index === 6) {
+          $(row).addClass("bold-text");
+        }
+      },
+      columns: [
+        {
+          data: "concept",
+          title: "Concept",
         },
-        columns:[
-            {
-                data:'concept',
-                title:'Concept'
-            },
-            {
-                data:'jan_2021',
-                title:'January 2021'
-            },
-            {
-                data:'feb_2021',
-                title:'February 2021'
-            },
-            {
-                data:'mar_2021',
-                title:'March 2021'
-            },
-            {
-                data:'apr_2021',
-                title:'April 2021'
-            },
-            {
-                data:'jun_2021',
-                title:'June 2021'
-            },
-        ]
-    })
-  }
+        {
+          data: "jan_2021",
+          title: "January 2021",
+        },
+        {
+          data: "feb_2021",
+          title: "February 2021",
+        },
+        {
+          data: "mar_2021",
+          title: "March 2021",
+        },
+        {
+          data: "apr_2021",
+          title: "April 2021",
+        },
+        {
+          data: "jun_2021",
+          title: "June 2021",
+        },
+      ],
+    });
+  },
 };
 </script>

@@ -2,7 +2,9 @@ $blue:#0259C2;
 // Datatables styles
 td,th{
     text-align: center !important;
+    font-size: 0.9rem !important;
 }
+
 #datatable_purchase_receipts_length label{
     display: none;
 }
@@ -45,7 +47,7 @@ th{
     text-align: center !important;
 }
 .bold-text{
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 .ml-auto{
     margin-left: auto !important;

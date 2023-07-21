@@ -8,8 +8,24 @@
       </div>
       <div class="moduleComponent">
         <b-card>
-          <p class="breadcrumb">Financial > Accrual Net Income</p>
-          <b-row>
+          <div class="d-flex">
+        <div>
+          <h1 class="blue-text">
+            <font-awesome-icon icon="fa-solid fa-money-check-dollar" size="1x" />
+            Financial | Accrual Net Income
+          </h1>
+        </div>
+        <div class="ml-auto">
+          <b-form-select
+            id="select-location"
+            class="form-select"
+            v-model="selectedLocation"
+            :options="optionsLocation"
+            filter
+          ></b-form-select>
+        </div>
+      </div>             
+      <b-row class="mt-3">
               <b-col md="12" class="d-flex justify-content-center">
                   <h2 class="titleFinancial">Austin Infectious Disease Cons - C004</h2>
               </b-col>
@@ -34,5 +50,17 @@
       SideNavBarVue,
       AccrualNetIncomeVue
     },
+    data:function(){
+      return{
+          selectedLocation:'Austin Infectious Disease Cons - C004',
+          optionsLocation:[
+              {text:'Austin Infectious Disease Cons - C004',value:'Austin Infectious Disease Cons - C004'},
+              {text:'Allergy & Asthma Clinics, GA - C271',value:'Allergy & Asthma Clinics, GA - C271'},
+              {text:'ID Specialists, PA - C051A',value:'ID Specialists, PA - C051A'},
+              {text:'ID Doctors Medical Group - C149',value:'ID Doctors Medical Group - C149'},
+              {text:'Texas Regional A&A Center-FLEX - C218',value:'Texas Regional A&A Center-FLEX - C218'},
+          ]
+      }
+    }
   };
   </script>

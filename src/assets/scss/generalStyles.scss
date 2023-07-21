@@ -27,11 +27,21 @@ body {
 .uir-page-title {
     display: none;
 }
+.uir-header-buttons{
+    padding: 0px !important;
+}
+#main_form,
+#div__body{
+    padding: 0px !important;
+}
+div#innerwrapper div#div__body {
+padding: 0px !important;
+}
 
 #global {
     display: grid !important;
     grid-template-columns: 16rem 1fr;
-    grid-template-rows: 4rem 100vh;
+    grid-template-rows: 4rem 100%;
 }
 
 .topNavBarC {
@@ -61,14 +71,14 @@ body {
 
 .userName {
     color: $gray-1;
-    font-weight: 400;
-    font-size: 1.1rem;
+    font-weight: 400 !important;
+    font-size: 1.1rem !important;
 }
 
 .userRole {
     color: $gray-1;
-    font-weight: 400;
-    font-size: 0.9rem;
+    font-weight: 400 !important;
+    font-size: 0.9rem !important;
 }
 
 div:has(.collapsed) {
@@ -129,7 +139,7 @@ nav.navbar {
 }
 // Menu of SideBar styles
 .menuItem{
-    font-size: 1rem;
+    font-size: 1rem !important;
     &:hover{
         cursor: pointer;
         background-color: $topNavColor;
@@ -137,6 +147,7 @@ nav.navbar {
     }
 }
 .menuSubItem {
+    font-size: 1rem !important;
     &:hover a,
     &:hover{
         cursor: pointer;
@@ -152,20 +163,24 @@ a{
 // Breadcrumbs styles
 .breadcrumb{
     color: $topNavColor;
-    font-size: 0.8rem;
-    font-weight: 400;
+    font-size: 0.8rem !important;
+    font-weight: 400 !important;
     margin-top: 0px !important;
     padding-top: 0px !important;
 }
+h2,h4{
+    margin: 0px !important;
+}
 // Titles and subtitles of the Financials
 .titleFinancial{
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
+    margin-bottom: 10px !important;
     color: $gray-1;
 }
 .subtitleFinancial{
-    font-size: 1rem;
+    font-size: 1rem !important;
     color: $gray-1;
-    font-weight: 400;
+    font-weight: 400 !important;
 }
 .blue-text{
     color:$topNavColor !important;
@@ -173,10 +188,108 @@ a{
 .btn-icon{
     cursor:pointer !important;
     padding:7px;
+    font-size: 20px !important;
     &:hover{
         color:$backgroundColor !important;
         background-color: $topNavColor;
         border-radius: 3px;
 
     }
+}
+label{
+    font-size: 0.9rem !important;
+}
+
+ul{
+    padding-left: 0px !important;
+    margin-bottom: 12px !important;
+}
+h1{
+    font-size: 1.9rem !important;
+}
+select,
+input{
+    border-radius: 3px !important;
+}
+
+
+.cheto {
+    background-color: #b3cdec;
+    color: #001a3a;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: $topNavColor;
+    padding-left: 10px;
+    padding-top: 0px;
+    padding-bottom: 2px;
+    padding-right: 10px;
+    margin-right: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    white-space: pre-line;
+    word-break: keep-all;
+    word-wrap: normal;
+    display: inline;
+    &.green{
+        background-color: #9bda67;
+    color: #234d00
+    ;
+    }
+    &.btn{
+        background-color: #147dfd;
+    color: #e5eef8;
+    }
+}
+.money_title{
+    font-weight: 500 !important;
+    font-size: 1.2rem !important;
+    color: $gray-1 !important;
+}
+.money_amount{
+    font-size: 1.1rem !important;
+}
+.gray-text{
+    color: $gray-1 !important;
+    font-size: 0.9rem !important;
+}
+.bk-blue{
+    background-color: #b3cdec !important;
+}
+.date{
+    font-size: 0.8rem !important;
+    color: $gray-1 !important;
+    text-align: left !important;
+
+}
+.announcement_title{
+color: $topNavColor !important;
+font-weight: 500 !important;
+font-size: 1rem !important;
+text-align: left !important;
+
+}
+.announcement_content{
+color: $gray-1 !important;
+font-weight: 400 !important;
+font-size: 0.9rem !important;
+text-align: left !important;
+
+}
+.btn-blue{
+    background-color: $topNavColor !important;
+    border-color: $topNavColor !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+}
+h4{
+    font-size: 1.3rem !important;
+    text-align: left !important;
+}
+.bk-blue-btn{
+    background-color: $topNavColor !important;
+    border-color: $topNavColor !important;
+}
+h3{
+    font-size: 1.5rem !important;
+    text-align: left !important;
 }

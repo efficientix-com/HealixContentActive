@@ -20,7 +20,9 @@ import {
   faFileInvoice,
   faArrowRightFromBracket,
   faFileExport,
-  faPrint
+  faPrint,
+  faBullhorn,
+  faVideo
 } from '@fortawesome/free-solid-svg-icons'
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
@@ -39,6 +41,8 @@ library.add(faFileInvoice);
 library.add(faArrowRightFromBracket);
 library.add(faFileExport);
 library.add(faPrint);
+library.add(faBullhorn);
+library.add(faVideo);
 
 Vue.use(VueRouter);
 const router = new VueRouter({

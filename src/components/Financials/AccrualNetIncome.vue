@@ -23,10 +23,10 @@
         
         <div class="d-flex justify-content-center align-items-center blue-text ml-auto mr-1">
           
-              <font-awesome-icon class="btn-icon" icon="fa-file-export" size="1x" />
+              <font-awesome-icon title="Export" class="btn-icon" icon="fa-file-export" size="1x" />
         </div>
         <div class="d-flex justify-content-center align-items-center blue-text">
-          <font-awesome-icon class="btn-icon" icon="fa-print" size="1x" />
+          <font-awesome-icon title="Print" class="btn-icon" icon="fa-print" size="1x" />
         </div>
       </div>
       <b-row class="mt-4">

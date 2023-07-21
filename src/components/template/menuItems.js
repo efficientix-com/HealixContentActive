@@ -43,7 +43,7 @@ const menuItems = () => {
         {
             id:3,
             title:'Billing',
-            path:'#/billing',
+            path:'#/billing-invoice',
             icon:'fa-solid fa-dollar-sign',
             hasChildren:true,
             toggled:false,
@@ -52,7 +52,12 @@ const menuItems = () => {
                     subtitle: 'Invoice',
                     icon:'fa-solid fa-dollar-sign',
                     path:'#/billing-invoice'
-                }
+                },
+                {
+                    subtitle: 'Statements',
+                    icon:'fa-solid fa-file-invoice',
+                    path:'#/billing-statements'
+                },
             ]
         },
         {
@@ -72,7 +77,7 @@ const menuItems = () => {
         {
             id:6,
             title:'Manage Sites',
-            path:'#/manage-sites',
+            path:'#/site',
             icon:'fa-solid fa-location-arrow',
             hasChildren:true,
             toggled:false,
@@ -99,7 +104,7 @@ const menuItems = () => {
         {
             id:8,
             title:'Logout',
-            path:'#/logout',
+            path:'#/',
             icon:'fa-solid fa-arrow-right-from-bracket',
             hasChildren:false
         },
